@@ -79,6 +79,7 @@ func createBranchAndCommit(sshKey, email string) {
 }
 
 func main() {
+	flag.Parse()
 	defer func() {
 		if err := os.RemoveAll("./dst"); err != nil {
 			panic(err)
